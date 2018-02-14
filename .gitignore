@@ -1,0 +1,6 @@
+# Ignore bundler config.
+/.bundle
+
+# Other
+.byebug_history
+.DS_Store
