@@ -20,10 +20,6 @@ RSpec/RepeatedDescription:
 RSpec/MessageSpies:
   EnforcedStyle: receive
 
-RSpec/EmptyExampleGroup:
-  Exclude:
-    - spec/api/**/*
-
 RSpec/NestedGroups:
   Max: 5
 
