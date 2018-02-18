@@ -7,14 +7,14 @@ class Run
 
   def generate_xml
     builder = Nokogiri::XML::Builder.new do |xml|
-      xml.root {
-        xml.products {
-          xml.widget {
+      xml.root do
+        xml.products do
+          xml.widget do
             xml.id_ "10"
             xml.name "Awesome widget"
-          }
-        }
-      }
+          end
+        end
+      end
     end
 
     puts builder.to_xml
