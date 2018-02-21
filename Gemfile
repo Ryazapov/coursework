@@ -4,7 +4,7 @@ ruby "2.5.0"
 
 # core
 gem "interactor"
-gem "json"
+gem "oj"
 gem "nokogiri"
 
 group :development, :test do

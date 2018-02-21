@@ -1,6 +1,8 @@
+require "./app/interactors/generate_sketch"
+
 class Run
   def call
-    generate_xml
+    p GeneateSketch.call.json
   end
 
   private
