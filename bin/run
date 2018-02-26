@@ -1,8 +1,20 @@
 #!/usr/bin/env ruby
-
 require "bundler/setup"
-require "./app/run"
 
 Bundler.require
+
+require "interactor"
+require "active_model"
+require "json"
+
+require "./app/run"
+require "./app/models/application_model"
+require "./app/interactors/read_json"
+require "./app/interactors/parse_json"
+require "./app/interactors/generate_subview"
+require "./app/interactors/generate_sketch"
+require "./app/interactors/generate_root"
+require "./app/models/application_model"
+require "./app/models/button"
 
 Run.new.call
