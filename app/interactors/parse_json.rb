@@ -1,6 +1,3 @@
-require "interactor"
-require "json"
-
 class ParseJson
   include Interactor
 

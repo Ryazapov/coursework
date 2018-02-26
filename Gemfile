@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "2.5.0"
 
 # core
+gem "activemodel"
 gem "interactor"
 gem "oj"
 gem "nokogiri"

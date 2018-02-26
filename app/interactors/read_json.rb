@@ -1,5 +1,3 @@
-require "interactor"
-
 class ReadJson
   include Interactor
 
