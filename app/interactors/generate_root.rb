@@ -3,6 +3,7 @@ class GenerateRoot
 
   def call
     context.builder = Nokogiri::XML::Builder.new(encoding: "UTF-8") do |xml|
+      context.xml = xml
       xml.document(document_attributes) do
         xml.dependencies do
           xml.plugIn(identifier: "com.apple.InterfaceBuilder.IBCocoaTouchPlugin", version: "13772")
@@ -21,7 +22,9 @@ class GenerateRoot
             xml.autoresizingMask(key: "autoresizingMask", widthSizable: "YES", heightSizable: "YES")
             xml.color(color_attributes)
             xml.viewLayoutGuide(key: "safeArea", id: "vUN-kp-3ea")
-            GenerateSubview.call(xml: xml)
+            xml.subviews do
+              GenerateSubview.call(context)
+            end
           end
         end
       end
