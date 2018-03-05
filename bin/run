@@ -6,16 +6,19 @@ Bundler.require
 require "interactor"
 require "active_model"
 require "json"
+require "pry"
 
 require "./app/run"
 require "./app/models/application_model"
+require "./app/models/item"
+require "./app/models/button"
 require "./app/interactors/read_json"
 require "./app/interactors/parse_json"
 require "./app/interactors/generate_subview"
+require "./app/interactors/prepare_subview"
+require "./app/interactors/prepare_buttons"
 require "./app/interactors/generate_root"
 require "./app/interactors/write_xml"
 require "./app/interactors/generate_sketch"
-require "./app/models/application_model"
-require "./app/models/button"
 
 Run.new.call

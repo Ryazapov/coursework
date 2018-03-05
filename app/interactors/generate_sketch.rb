@@ -1,5 +1,5 @@
 class GenerateSketch
   include Interactor::Organizer
 
-  organize ReadJson, ParseJson, GenerateRoot, WriteXml
+  organize ReadJson, ParseJson, PrepareSubview, GenerateRoot, WriteXml
 end

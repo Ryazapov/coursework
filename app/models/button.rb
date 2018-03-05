@@ -1,13 +1,11 @@
-class Button < ApplicationModel
-  attr_accessor :title, :width, :height, :x, :y
+class Button < Item
+  attr_accessor :title
 
   def to_xml(xml)
-    xml.subviews do
-      xml.button(defaulte_attributes) do
-        xml.rect(rect_attributes)
-        xml.autoresizingMask(key: "autoresizingMask", flexibleMaxX: "YES", flexibleMaxY: "YES")
-        xml.state(key: "normal", title: title)
-      end
+    xml.button(defaulte_attributes) do
+      xml.rect(rect_attributes)
+      xml.autoresizingMask(key: "autoresizingMask", flexibleMaxX: "YES", flexibleMaxY: "YES")
+      xml.state(key: "normal", title: title)
     end
   end
 
@@ -21,7 +19,7 @@ class Button < ApplicationModel
       buttonType: "roundedRect",
       lineBreakMode: "middleTruncation",
       translatesAutoresizingMaskIntoConstraints: "NO",
-      id: "Ecc-1w-DHn"
+      id: view_id
     }
   end
 
@@ -33,5 +31,9 @@ class Button < ApplicationModel
       width: width,
       height: height
     }
+  end
+
+  def view_id
+    @view_id ||= SecureRandom.uuid
   end
 end
