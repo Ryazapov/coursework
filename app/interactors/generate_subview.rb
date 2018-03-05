@@ -6,7 +6,4 @@ class GenerateSubview
 
     b.to_xml(context.xml)
   end
-
-  private
-
 end
