@@ -1,6 +1,7 @@
 class Run
+  include Interactor
+
   def call
-    builder = GenerateRoot.call.builder
-    puts builder.to_xml
+    GenerateSketch.call
   end
 end
