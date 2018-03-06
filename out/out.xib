@@ -8,31 +8,36 @@
   <objects>
     <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModuleProvider="target">
       <connections>
-        <outlet property="view" destination="36cbed3e-4712-475d-9aff-5250432221f1" id="sfx-zR-JGt"/>
+        <outlet property="view" destination="640b5c8f-154f-4e78-83c7-eed02b60d3d7" id="sfx-zR-JGt"/>
       </connections>
     </placeholder>
     <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-    <view contentMode="scaleToFill" id="36cbed3e-4712-475d-9aff-5250432221f1">
+    <view contentMode="scaleToFill" id="640b5c8f-154f-4e78-83c7-eed02b60d3d7">
       <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
       <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
       <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
       <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
       <subviews>
-        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b011790-f9d8-4757-910b-ae9b3bf2a392">
+        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b404e27-c6ee-497f-9531-caef5dc44ce5">
           <rect key="frame" x="0" y="0" width="295" height="50"/>
           <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
           <state key="normal" title="Third"/>
         </button>
-        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2c23e327-e144-49be-9bd0-7dc44be2a88d">
-          <rect key="frame" x="0" y="181" width="295" height="50"/>
+        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="572a30eb-29e3-438c-9d65-bb31a0cbf9f3">
+          <rect key="frame" x="0" y="72" width="295" height="50"/>
           <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
           <state key="normal" title="Second"/>
         </button>
-        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0407f151-5702-453f-9f4a-3febd35e56e5">
-          <rect key="frame" x="0" y="373" width="295" height="50"/>
+        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd6ad696-6181-4a52-ad5b-980ac018280f">
+          <rect key="frame" x="0" y="143" width="295" height="50"/>
           <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
           <state key="normal" title="First"/>
         </button>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8db9dca-8052-4772-8b23-ac1e7bd3f133">
+          <rect key="frame" x="0" y="0" width="170" height="57"/>
+          <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+          <fontDescription key="fontDescription" type="system" pointSize="17"/>
+        </label>
       </subviews>
     </view>
   </objects>

@@ -2,11 +2,8 @@ class PrepareButtons
   include Interactor
 
   def call
-    buttons = context.json
-    while(buttons["name"] != "Buttons") do
-      buttons = buttons["layers"].first
-    end
-    search_button(buttons["layers"])
+    buttons = context.json["layers"].first["layers"].first["layers"]
+    search_button(buttons)
   end
 
   private
