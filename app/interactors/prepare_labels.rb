@@ -18,11 +18,11 @@ class PrepareLabels
 
   def search_label(labels)
     labels.each do |label|
-      context.subviews << Label.new(label_attrebutes(label))
+      context.subviews << Label.new(label_attributes(label))
     end
   end
 
-  def label_attrebutes(label_json)
+  def label_attributes(label_json)
     {
       x: label_json["frame"]["x"] + defaulte_x,
       y: label_json["frame"]["y"] + defaulte_y,
