@@ -1,11 +1,14 @@
 class Button < Item
-  attr_accessor :title
+  attr_accessor :title, :color, :title_color
 
   def to_xml(xml)
     xml.button(defaulte_attributes) do
       xml.rect(rect_attributes)
       xml.autoresizingMask(key: "autoresizingMask", flexibleMaxX: "YES", flexibleMaxY: "YES")
-      xml.state(key: "normal", title: title)
+      xml.color(key: "backgroundColor", red: color["red"], green: color["green"], blue: color["blue"], alpha: color["alpha"], colorSpace: "custom", customColorSpace: "sRGB")
+      xml.state(key: "normal", title: title) do
+        xml.color(key: "textColor", red: title_color["red"], green: title_color["green"], blue: title_color["blue"], alpha: title_color["alpha"], colorSpace: "custom", customColorSpace: "sRGB")
+      end
     end
   end
 

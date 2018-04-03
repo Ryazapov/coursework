@@ -3,8 +3,12 @@ class PrepareSubview
 
   def call
     context.subviews = []
-    prepare_buttons
-    prepare_labels
+
+    layers = context.json["layers"].first["layers"]
+    layers.each do |layer|
+      context.layer = layer
+      Object.const_get("Prepare#{layer['name']}").call(context)
+    end
   end
 
   private
