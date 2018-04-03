@@ -10,11 +10,11 @@ class PrepareButtons
 
   def search_button(buttons)
     buttons.each do |button|
-      context.subviews << Button.new(button_attrebutes(button))
+      context.subviews << Button.new(button_attributes(button))
     end
   end
 
-  def button_attrebutes(button_json)
+  def button_attributes(button_json)
     {
       x: button_json["frame"]["x"],
       y: button_json["frame"]["y"],

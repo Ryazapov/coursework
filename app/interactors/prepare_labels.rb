@@ -10,11 +10,11 @@ class PrepareLabels
 
   def search_button(labels)
     labels.each do |label|
-      context.subviews << Label.new(labels_attrebutes(label))
+      context.subviews << Label.new(labels_attributes(label))
     end
   end
 
-  def labels_attrebutes(labels_json)
+  def labels_attributes(labels_json)
     {
       x: labels_json["frame"]["x"],
       y: labels_json["frame"]["y"],

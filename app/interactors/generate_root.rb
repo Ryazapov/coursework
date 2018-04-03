@@ -5,33 +5,45 @@ class GenerateRoot
     context.builder = Nokogiri::XML::Builder.new(encoding: "UTF-8") do |xml|
       context.xml = xml
       xml.document(document_attributes) do
-        xml.dependencies do
-          xml.plugIn(identifier: "com.apple.InterfaceBuilder.IBCocoaTouchPlugin", version: "13772")
-          xml.capability(name: "Safe area layout guides", minToolsVersion: "9.0")
-          xml.capability(name: "documents saved in the Xcode 8 format", minToolsVersion: "8.0")
-        end
-        xml.objects do
-          xml.placeholder(placeholder_attributes) do
-            xml.connections do
-              xml.outlet(property: "view", destination: view_id, id: "sfx-zR-JGt")
-            end
-          end
-          xml.placeholder(placeholderIdentifier: "IBFirstResponder", id: "-2", customClass: "UIResponder")
-          xml.view(contentMode: "scaleToFill", id: view_id) do
-            xml.rect(key: "frame", x: "0.0", y: "0.0", width: "375", height: "667")
-            xml.autoresizingMask(key: "autoresizingMask", widthSizable: "YES", heightSizable: "YES")
-            xml.color(color_attributes)
-            xml.viewLayoutGuide(key: "safeArea", id: "vUN-kp-3ea")
-            xml.subviews do
-              GenerateSubview.call(context)
-            end
-          end
-        end
+        build_dependencies(xml)
+        build_objects(xml)
       end
     end
   end
 
   private
+
+  def build_dependencies(xml)
+    xml.dependencies do
+      xml.plugIn(identifier: "com.apple.InterfaceBuilder.IBCocoaTouchPlugin", version: "13772")
+      xml.capability(name: "Safe area layout guides", minToolsVersion: "9.0")
+      xml.capability(name: "documents saved in the Xcode 8 format", minToolsVersion: "8.0")
+    end
+  end
+
+  def build_objects(xml)
+    xml.objects do
+      xml.placeholder(placeholder_attributes) do
+        xml.connections do
+          xml.outlet(property: "view", destination: view_id, id: "sfx-zR-JGt")
+        end
+      end
+      xml.placeholder(placeholderIdentifier: "IBFirstResponder", id: "-2", customClass: "UIResponder")
+      build_view(xml)
+    end
+  end
+
+  def build_view(xml)
+    xml.view(contentMode: "scaleToFill", id: view_id) do
+      xml.rect(key: "frame", x: "0.0", y: "0.0", width: "375", height: "667")
+      xml.autoresizingMask(key: "autoresizingMask", widthSizable: "YES", heightSizable: "YES")
+      xml.color(color_attributes)
+      xml.viewLayoutGuide(key: "safeArea", id: "vUN-kp-3ea")
+      xml.subviews do
+        GenerateSubview.call(context)
+      end
+    end
+  end
 
   def document_attributes
     {
