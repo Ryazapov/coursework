@@ -1,5 +1,5 @@
 class Button < Item
-  attr_accessor :title, :color, :title_color
+  attr_accessor :title, :color, :title_color, :corner_radius
 
   def to_xml(xml)
     xml.button(defaulte_attributes) do
@@ -9,6 +9,19 @@ class Button < Item
       xml.state(key: "normal", title: title) do
         xml.color(key: "textColor", red: title_color["red"], green: title_color["green"], blue: title_color["blue"], alpha: title_color["alpha"], colorSpace: "custom", customColorSpace: "sRGB")
       end
+      build_runtime_attributes(xml)
+    end
+  end
+
+  def build_runtime_attributes(xml)
+    xml.userDefinedRuntimeAttributes do
+      build_corner_radius(xml)
+    end
+  end
+
+  def build_corner_radius(xml)
+    xml.userDefinedRuntimeAttribute(type: "number", keyPath: "layer.cornerRadius") do
+      xml.integer(key: "value", value: corner_radius)
     end
   end
 
