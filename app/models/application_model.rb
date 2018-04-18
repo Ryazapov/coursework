@@ -1,3 +1,3 @@
 class ApplicationModel
-   include ActiveModel::Model
+  include ActiveModel::Model
 end

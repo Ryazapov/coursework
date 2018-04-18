@@ -30,7 +30,8 @@ class PrepareButtons
       height: button_json["frame"]["height"],
       color: button_json["layers"][0]["style"]["fills"][0]["color"],
       title: button_json["layers"][1]["name"],
-      title_color: button_json["layers"][1]["style"]["textStyle"]["encodedAttributes"]["MSAttributedStringColorDictionaryAttribute"]
+      title_color: button_json["layers"][1]["style"]["textStyle"]["encodedAttributes"]["MSAttributedStringColorAttribute"],
+      corner_radius: button_json["layers"][0]["layers"][0]["fixedRadius"]
     }
   end
 end
