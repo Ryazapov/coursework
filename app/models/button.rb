@@ -7,10 +7,22 @@ class Button < Item
       xml.autoresizingMask(key: "autoresizingMask", flexibleMaxX: "YES", flexibleMaxY: "YES")
       xml.color(key: "backgroundColor", red: color["red"], green: color["green"], blue: color["blue"], alpha: color["alpha"], colorSpace: "custom", customColorSpace: "sRGB")
       xml.state(key: "normal", title: title) do
-        xml.color(key: "textColor", red: title_color["red"], green: title_color["green"], blue: title_color["blue"], alpha: title_color["alpha"], colorSpace: "custom", customColorSpace: "sRGB")
+        build_text_color(xml)
       end
       build_runtime_attributes(xml)
     end
+  end
+
+  def build_text_color(xml)
+    xml.color(
+      key: "titleColor",
+      red: title_color["red"],
+      green: title_color["green"],
+      blue: title_color["blue"],
+      alpha: title_color["alpha"],
+      colorSpace: "custom",
+      customColorSpace: "sRGB"
+    )
   end
 
   def build_runtime_attributes(xml)
@@ -20,7 +32,7 @@ class Button < Item
   end
 
   def build_corner_radius(xml)
-    xml.userDefinedRuntimeAttribute(type: "number", keyPath: "layer.cornerRadius") do
+    xml.userDefinedRuntimeAttribute(type: "number", keyPath: "cornerRadius") do
       xml.integer(key: "value", value: corner_radius)
     end
   end

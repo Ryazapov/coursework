@@ -6,7 +6,15 @@ class Label < Item
       xml.rect(rect_attributes)
       xml.autoresizingMask(key: "autoresizingMask", flexibleMaxX: "YES", flexibleMaxY: "YES")
       xml.fontDescription(key: "fontDescription", type: "system", pointSize: "17")
-      xml.color(key: "textColor", red: title_color["red"], green: title_color["green"], blue: title_color["blue"], alpha: title_color["alpha"], colorSpace: "custom", customColorSpace: "sRGB")
+      xml.color(
+        key: "textColor",
+        red: title_color["red"],
+        green: title_color["green"],
+        blue: title_color["blue"],
+        alpha: title_color["alpha"],
+        colorSpace: "custom",
+        customColorSpace: "sRGB"
+      )
     end
   end
 

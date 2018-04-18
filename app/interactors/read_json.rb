@@ -12,6 +12,6 @@ class ReadJson
   end
 
   def path
-    @path ||= "in/A5030B91-2998-4338-B2CC-E9CAFC1DE2BE.json"
+    @path ||= "in/0ED7D5E3-DE60-4F05-9B6E-CF69B6EFF25A.json"
   end
 end
