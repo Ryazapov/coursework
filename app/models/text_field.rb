@@ -1,4 +1,4 @@
-class Button < Item
+class TextField < Item
   attr_accessor :text, :color, :text_color, :corner_radius
 
   def to_xml(xml)

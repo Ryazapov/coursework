@@ -1,6 +1,4 @@
-class PrepareNavigationBar
-  include Interactor
-
+class PrepareNavigationBar < BaseMapper
   def call
     context.subviews << NavigationBar.new(navigation_bar_attributes(context.layer["layers"]))
   end

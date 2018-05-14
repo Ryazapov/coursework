@@ -1,5 +1,5 @@
 class Label < Item
-  attr_accessor :text, :title_color
+  attr_accessor :text, :text_color
 
   def to_xml(xml)
     xml.label(defaulte_attributes) do
@@ -8,10 +8,10 @@ class Label < Item
       xml.fontDescription(key: "fontDescription", type: "system", pointSize: "17")
       xml.color(
         key: "textColor",
-        red: title_color["red"],
-        green: title_color["green"],
-        blue: title_color["blue"],
-        alpha: title_color["alpha"],
+        red: text_color["red"],
+        green: text_color["green"],
+        blue: text_color["blue"],
+        alpha: text_color["alpha"],
         colorSpace: "custom",
         customColorSpace: "sRGB"
       )

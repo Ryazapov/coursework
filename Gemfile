@@ -5,7 +5,6 @@ ruby "2.5.1"
 # core
 gem "activemodel"
 gem "interactor"
-gem "oj"
 gem "nokogiri"
 
 group :development, :test do
