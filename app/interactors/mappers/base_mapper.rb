@@ -10,7 +10,6 @@ class BaseMapper
 
   def search_model(json)
     json.each do |model|
-      attrs = map_attributes(model)
       context.subviews << map_model.new(map_attributes(model))
     end
   end
