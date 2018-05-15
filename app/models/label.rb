@@ -6,15 +6,7 @@ class Label < Item
       xml.rect(rect_attributes)
       xml.autoresizingMask(key: "autoresizingMask", flexibleMaxX: "YES", flexibleMaxY: "YES")
       xml.fontDescription(key: "fontDescription", type: "system", pointSize: "17")
-      xml.color(
-        key: "textColor",
-        red: text_color["red"],
-        green: text_color["green"],
-        blue: text_color["blue"],
-        alpha: text_color["alpha"],
-        colorSpace: "custom",
-        customColorSpace: "sRGB"
-      )
+      xml.color(color_attributes(text_color).merge(key: "textColor"))
     end
   end
 
@@ -34,19 +26,5 @@ class Label < Item
       translatesAutoresizingMaskIntoConstraints: "NO",
       id: view_id
     }
-  end
-
-  def rect_attributes
-    {
-      key: "frame",
-      x: x,
-      y: y,
-      width: width,
-      height: height
-    }
-  end
-
-  def view_id
-    @view_id ||= SecureRandom.uuid
   end
 end

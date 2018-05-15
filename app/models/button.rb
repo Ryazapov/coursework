@@ -1,28 +1,16 @@
-class Button < Item
-  attr_accessor :text, :color, :text_color, :corner_radius
+class Button < Label
+  attr_accessor :background_color, :corner_radius
 
   def to_xml(xml)
     xml.button(defaulte_attributes) do
       xml.rect(rect_attributes)
       xml.autoresizingMask(key: "autoresizingMask", flexibleMaxX: "YES", flexibleMaxY: "YES")
-      xml.color(key: "backgroundColor", red: color["red"], green: color["green"], blue: color["blue"], alpha: color["alpha"], colorSpace: "custom", customColorSpace: "sRGB")
+      xml.color(color_attributes(background_color).merge(key: "backgroundColor"))
       xml.state(key: "normal", title: text) do
-        build_text_color(xml)
+        xml.color(color_attributes(text_color).merge(key: "titleColor"))
       end
       build_runtime_attributes(xml)
     end
-  end
-
-  def build_text_color(xml)
-    xml.color(
-      key: "titleColor",
-      red: text_color["red"],
-      green: text_color["green"],
-      blue: text_color["blue"],
-      alpha: text_color["alpha"],
-      colorSpace: "custom",
-      customColorSpace: "sRGB"
-    )
   end
 
   def build_runtime_attributes(xml)
@@ -49,19 +37,5 @@ class Button < Item
       translatesAutoresizingMaskIntoConstraints: "NO",
       id: view_id
     }
-  end
-
-  def rect_attributes
-    {
-      key: "frame",
-      x: x,
-      y: y,
-      width: width,
-      height: height
-    }
-  end
-
-  def view_id
-    @view_id ||= SecureRandom.uuid
   end
 end

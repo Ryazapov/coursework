@@ -9,10 +9,10 @@ require "json"
 require "pry"
 
 require "./app/run"
-require "./app/models/application_model"
+
 require "./app/models/item"
-require "./app/models/button"
 require "./app/models/label"
+require "./app/models/button"
 require "./app/models/navigation_bar"
 require "./app/models/text_field"
 

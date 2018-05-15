@@ -25,7 +25,7 @@ class PrepareTextFields < BaseMapper
 
   def background(json)
     {
-      color: json["layers"][0]["style"]["fills"][0]["color"],
+      background_color: json["layers"][0]["style"]["fills"][0]["color"],
       corner_radius: json["layers"][0]["layers"][0]["fixedRadius"]
     }
   end

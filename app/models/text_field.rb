@@ -1,39 +1,11 @@
 class TextField < Item
-  attr_accessor :text, :color, :text_color, :corner_radius
+  attr_accessor :text, :background_color, :text_color, :corner_radius
 
   def to_xml(xml)
-    xml.button(defaulte_attributes) do
+    xml.textField(defaulte_attributes) do
       xml.rect(rect_attributes)
       xml.autoresizingMask(key: "autoresizingMask", flexibleMaxX: "YES", flexibleMaxY: "YES")
-      xml.color(key: "backgroundColor", red: color["red"], green: color["green"], blue: color["blue"], alpha: color["alpha"], colorSpace: "custom", customColorSpace: "sRGB")
-      xml.state(key: "normal", title: text) do
-        build_text_color(xml)
-      end
-      build_runtime_attributes(xml)
-    end
-  end
-
-  def build_text_color(xml)
-    xml.color(
-      key: "titleColor",
-      red: text_color["red"],
-      green: text_color["green"],
-      blue: text_color["blue"],
-      alpha: text_color["alpha"],
-      colorSpace: "custom",
-      customColorSpace: "sRGB"
-    )
-  end
-
-  def build_runtime_attributes(xml)
-    xml.userDefinedRuntimeAttributes do
-      build_corner_radius(xml)
-    end
-  end
-
-  def build_corner_radius(xml)
-    xml.userDefinedRuntimeAttribute(type: "number", keyPath: "cornerRadius") do
-      xml.integer(key: "value", value: corner_radius)
+      xml.color(color_attributes(background_color).merge(key: "backgroundColor"))
     end
   end
 
@@ -42,26 +14,13 @@ class TextField < Item
       opaque: "NO",
       contentMode: "scaleToFill",
       fixedFrame: "YES",
-      contentHorizontalAlignment: "center",
+      contentHorizontalAlignment: "left",
       contentVerticalAlignment: "center",
-      buttonType: "roundedRect",
-      lineBreakMode: "middleTruncation",
+      borderStyle: "line",
+      textAlignment: "natural",
+      placeholder: text,
       translatesAutoresizingMaskIntoConstraints: "NO",
       id: view_id
     }
-  end
-
-  def rect_attributes
-    {
-      key: "frame",
-      x: x,
-      y: y,
-      width: width,
-      height: height
-    }
-  end
-
-  def view_id
-    @view_id ||= SecureRandom.uuid
   end
 end
