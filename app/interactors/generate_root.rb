@@ -5,6 +5,7 @@ class GenerateRoot
     context.builder = Nokogiri::XML::Builder.new(encoding: "UTF-8") do |xml|
       context.xml = xml
       xml.document(document_attributes) do
+        build_device(xml)
         build_dependencies(xml)
         build_objects(xml)
       end
@@ -12,6 +13,12 @@ class GenerateRoot
   end
 
   private
+
+  def build_device(xml)
+    xml.device(id: "retina4_0", orientation: "portrait") do
+      xml.adaptation(id: "fullscreen")
+    end
+  end
 
   def build_dependencies(xml)
     xml.dependencies do

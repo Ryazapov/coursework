@@ -8,9 +8,12 @@ class NavigationBar < Label
       xml.color(color_attributes(bar_tint_color).merge(key: "barTintColor"))
       xml.items do
         xml.navigationItem(title: text, id: generate_view_id) do
-          xml.barButtonItem(key: "leftBarButtonItem", title: left_item_text, id: generate_view_id) do
-            xml.color(color_attributes(left_item_color).merge(key: "tintColor"))
+          if left_item_text
+            xml.barButtonItem(key: "leftBarButtonItem", title: left_item_text, id: generate_view_id) do
+              xml.color(color_attributes(left_item_color).merge(key: "tintColor"))
+            end
           end
+
           xml.barButtonItem(key: "rightBarButtonItem", title: right_item_text, id: generate_view_id) do
             xml.color(color_attributes(right_item_color).merge(key: "tintColor"))
           end
@@ -26,5 +29,13 @@ class NavigationBar < Label
       translatesAutoresizingMaskIntoConstraints: "NO",
       id: view_id
     }
+  end
+
+  def y
+    @y ||= 20
+  end
+
+  def x
+    @x ||= 0.0
   end
 end
