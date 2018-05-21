@@ -10,36 +10,62 @@ class PrepareNavigationBar < BaseMapper
   end
 
   def right_item(json)
-    {
-      right_item_text: json[1]["layers"][0]["name"],
-      right_item_color: json[1]["layers"][0]["style"]["textStyle"]["encodedAttributes"]["MSAttributedStringColorDictionaryAttribute"]
-    }
+    item = {}
+    json.each do |element|
+      next unless element["name"] == "Right"
+      item = {
+        right_item_text: element["layers"][0]["name"],
+        right_item_color: text_color_style(element)
+      }
+    end
+
+    item
   end
 
   def text(json)
-    {
-      text: json[2]["layers"][0]["name"],
-      bar_tint_color: json[2]["layers"][0]["style"]["textStyle"]["encodedAttributes"]["MSAttributedStringColorDictionaryAttribute"]
-    }
+    item = {}
+    json.each do |element|
+      next unless element["name"] == "Center"
+      item = {
+        text: element["layers"][0]["name"],
+        bar_tint_color: text_color_style(element)
+      }
+    end
+
+    item
   end
 
   def left_item(json)
-    return {} unless json[3]["layers"].size == 1
+    item = {}
+    json.each do |element|
+      next unless element["name"] == "Left" && element["layers"].size == 1
+      item = {
+        left_item_text: element["layers"][0]["name"],
+        left_item_color: text_color_style(element)
+      }
+    end
 
-    {
-      left_item_text: json[3]["layers"][0]["name"],
-      left_item_color: json[3]["layers"][0]["style"]["textStyle"]["encodedAttributes"]["MSAttributedStringColorDictionaryAttribute"]
-    }
+    item
   end
 
   def size(json)
-    {
-      height: json[0]["frame"]["height"] - 20,
-      width: json[0]["frame"]["width"]
-    }
+    item = {}
+    json.each do |element|
+      next unless element["name"] == "Bar"
+      item = {
+        height: element["frame"]["height"] - 20,
+        width: element["frame"]["width"]
+      }
+    end
+
+    item
   end
 
   def model_name
     "NavigationBar"
+  end
+
+  def text_color_style(json)
+    json["layers"][0]["style"]["textStyle"]["encodedAttributes"]["MSAttributedStringColorDictionaryAttribute"]
   end
 end

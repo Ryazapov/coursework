@@ -20,6 +20,7 @@ GEM
     minitest (5.11.3)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    openzip (1.0.4)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -28,7 +29,6 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     rainbow (3.0.0)
-    require_all (2.0.0)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
@@ -64,8 +64,8 @@ DEPENDENCIES
   activemodel
   interactor
   nokogiri
+  openzip
   pry
-  require_all
   rspec
   rubocop
   rubocop-rspec

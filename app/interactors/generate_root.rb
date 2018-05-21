@@ -92,3 +92,7 @@ class GenerateRoot
     @view_id ||= SecureRandom.uuid
   end
 end
+
+# <resources>
+#     <image name="106678_pause_512x512" width="256" height="256"/>
+# </resources>

@@ -6,6 +6,7 @@ ruby "2.5.1"
 gem "activemodel"
 gem "interactor"
 gem "nokogiri"
+gem "openzip"
 
 group :development, :test do
   gem "pry"
