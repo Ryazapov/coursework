@@ -24,16 +24,28 @@ class PrepareTextFields < BaseMapper
   end
 
   def background(json)
-    {
-      background_color: json["layers"][0]["style"]["fills"][0]["color"],
-      corner_radius: json["layers"][0]["layers"][0]["fixedRadius"]
-    }
+    item = {}
+    json["layers"].each do |element|
+      next unless element["name"] == "Field"
+      item = {
+        background_color: element["style"]["fills"][0]["color"],
+        corner_radius: element["layers"][0]["fixedRadius"]
+      }
+    end
+
+    item
   end
 
   def text(json)
-    {
-      text: json["layers"][1]["name"],
-      text_color: json["layers"][1]["style"]["textStyle"]["encodedAttributes"]["MSAttributedStringColorAttribute"]
-    }
+    item = {}
+    json["layers"].each do |element|
+      next unless element["name"] != "Field"
+      item = {
+        text: element["name"],
+        text_color: element["style"]["textStyle"]["encodedAttributes"]["MSAttributedStringColorAttribute"]
+      }
+    end
+
+    item
   end
 end

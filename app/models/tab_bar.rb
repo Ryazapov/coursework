@@ -6,7 +6,7 @@ class TabBar < Label
       xml.rect(rect_attributes)
       xml.autoresizingMask(key: "autoresizingMask", widthSizable: "YES", flexibleMaxY: "YES")
       xml.items do
-        items.sort_by { |i| i["text"] }.each do |item|
+        items.each do |item|
           xml.tabBarItem(title: item[:text], image: File.basename(item[:image]), id: generate_view_id)
         end
       end

@@ -16,7 +16,7 @@ class TextField < Item
       fixedFrame: "YES",
       contentHorizontalAlignment: "left",
       contentVerticalAlignment: "center",
-      borderStyle: "line",
+      borderStyle: "roundedRect",
       textAlignment: "natural",
       placeholder: text,
       translatesAutoresizingMaskIntoConstraints: "NO",

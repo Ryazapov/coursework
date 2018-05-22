@@ -8,6 +8,7 @@ gem "interactor"
 gem "mini_magick"
 gem "nokogiri"
 gem "openzip"
+gem "plist"
 
 group :development, :test do
   gem "pry"

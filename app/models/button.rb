@@ -1,13 +1,13 @@
 class Button < Label
-  attr_accessor :background_color, :corner_radius
+  attr_accessor :background_color, :corner_radius, :image
 
   def to_xml(xml)
     xml.button(defaulte_attributes) do
       xml.rect(rect_attributes)
       xml.autoresizingMask(key: "autoresizingMask", flexibleMaxX: "YES", flexibleMaxY: "YES")
       xml.color(color_attributes(background_color).merge(key: "backgroundColor"))
-      xml.state(key: "normal", title: text) do
-        xml.color(color_attributes(text_color).merge(key: "titleColor"))
+      xml.state(key: "normal", title: text, image: image) do
+        xml.color(color_attributes(text_color).merge(key: "titleColor")) if text_color
       end
       build_runtime_attributes(xml)
     end

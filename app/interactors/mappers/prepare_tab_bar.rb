@@ -11,7 +11,7 @@ class PrepareTabBar < BaseMapper
 
   def items(json)
     items = []
-    json.each do |element|
+    json.sort_by { |i| i["name"] }.each do |element|
       next unless element["name"].include?("Item")
       items << bar_item(element)
     end
