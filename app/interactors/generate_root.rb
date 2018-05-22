@@ -8,6 +8,7 @@ class GenerateRoot
         build_device(xml)
         build_dependencies(xml)
         build_objects(xml)
+        build_resources(xml)
       end
     end
   end
@@ -52,6 +53,14 @@ class GenerateRoot
     end
   end
 
+  def build_resources(xml)
+    xml.resources do
+      Dir["in/sketch/images/*"].each do |file|
+        xml.image(name: file_path(file), width: 36, height: 36)
+      end
+    end
+  end
+
   def document_attributes
     {
       type: "com.apple.InterfaceBuilder3.CocoaTouch.XIB",
@@ -88,11 +97,11 @@ class GenerateRoot
     }
   end
 
+  def file_path(file)
+    File.basename(file)
+  end
+
   def view_id
     @view_id ||= SecureRandom.uuid
   end
 end
-
-# <resources>
-#     <image name="106678_pause_512x512" width="256" height="256"/>
-# </resources>

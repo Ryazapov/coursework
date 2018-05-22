@@ -1,6 +1,8 @@
 class ReadJson
   include Interactor
 
+  PATH = "in/sketch".freeze
+
   def call
     context.string_json = read
   end
@@ -8,10 +10,12 @@ class ReadJson
   private
 
   def read
+    Openzip.extract(context.from, PATH)
+
     IO.read(path)
   end
 
   def path
-    @path ||= "in/0ED7D5E3-DE60-4F05-9B6E-CF69B6EFF25A.json"
+    @path ||= Dir["#{PATH}/pages/*"].first
   end
 end

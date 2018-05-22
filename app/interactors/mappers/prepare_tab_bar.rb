@@ -37,17 +37,11 @@ class PrepareTabBar < BaseMapper
     item
   end
 
-  def position(json)
-    item = {}
-    json.each do |element|
-      next unless element["name"] == "Bar"
-      item = {
-        x: 0,
-        y: element["frame"]["y"]
-      }
-    end
-
-    item
+  def position(_json)
+    {
+      x: context.layer["frame"]["x"],
+      y: context.layer["frame"]["y"]
+    }
   end
 
   def model_name

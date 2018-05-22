@@ -5,6 +5,7 @@ ruby "2.5.1"
 # core
 gem "activemodel"
 gem "interactor"
+gem "mini_magick"
 gem "nokogiri"
 gem "openzip"
 

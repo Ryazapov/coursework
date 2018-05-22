@@ -2,6 +2,6 @@ class Run
   include Interactor
 
   def call
-    GenerateSketch.call
+    GenerateSketch.call(context)
   end
 end

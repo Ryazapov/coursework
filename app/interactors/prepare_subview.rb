@@ -10,14 +10,4 @@ class PrepareSubview
       Object.const_get("Prepare#{layer['name']}").call(context)
     end
   end
-
-  private
-
-  def prepare_buttons
-    PrepareButtons.call(context)
-  end
-
-  def prepare_labels
-    PrepareLabels.call(context)
-  end
 end

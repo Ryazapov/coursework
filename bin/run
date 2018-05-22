@@ -33,4 +33,7 @@ require "./app/interactors/generate_root"
 require "./app/interactors/write_xml"
 require "./app/interactors/generate_sketch"
 
-Run.new.call
+from = "in/Test.sketch"
+to = "out"
+
+Run.call(from: from, to: to)
