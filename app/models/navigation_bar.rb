@@ -5,7 +5,7 @@ class NavigationBar < Label
     xml.navigationBar(defaulte_attributes) do
       xml.rect(rect_attributes)
       xml.autoresizingMask(key: "autoresizingMask", widthSizable: "YES", flexibleMaxY: "YES")
-      xml.color(color_attributes(bar_tint_color).merge(key: "barTintColor"))
+      xml.color(bar_tint_color)
       xml.items do
         xml.navigationItem(title: text, id: generate_view_id) do
           if left_item_text

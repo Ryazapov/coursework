@@ -1,6 +1,6 @@
 class PrepareNavigationBar < BaseMapper
   def attribute_method_names
-    %i[text left_item right_item size]
+    %i[text left_item right_item size bar_tint_color]
   end
 
   private
@@ -22,13 +22,24 @@ class PrepareNavigationBar < BaseMapper
     item
   end
 
+  def bar_tint_color(json)
+    item = {}
+    json.each do |element|
+      next unless element["name"] == "Bar"
+      item = {
+        bar_tint_color: element["style"]["fills"][0]["color"]
+      }
+    end
+
+    item
+  end
+
   def text(json)
     item = {}
     json.each do |element|
       next unless element["name"] == "Center"
       item = {
-        text: element["layers"][0]["name"],
-        bar_tint_color: text_color_style(element)
+        text: element["layers"][0]["name"]
       }
     end
 

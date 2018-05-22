@@ -43,7 +43,7 @@ class GenerateRoot
 
   def build_view(xml)
     xml.view(contentMode: "scaleToFill", id: view_id) do
-      xml.rect(key: "frame", x: "0.0", y: "0.0", width: "375", height: "667")
+      xml.rect(key: "frame", x: "0.0", y: "0.0", width: "320", height: "568")
       xml.autoresizingMask(key: "autoresizingMask", widthSizable: "YES", heightSizable: "YES")
       xml.color(color_attributes)
       xml.viewLayoutGuide(key: "safeArea", id: "vUN-kp-3ea")
@@ -65,7 +65,7 @@ class GenerateRoot
     {
       type: "com.apple.InterfaceBuilder3.CocoaTouch.XIB",
       version: "3.0",
-      toolsVersion: "13771",
+      toolsVersion: "14109",
       targetRuntime: "iOS.CocoaTouch",
       propertyAccessControl: "none",
       useAutolayout: "YES",
