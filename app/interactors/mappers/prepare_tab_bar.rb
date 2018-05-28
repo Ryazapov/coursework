@@ -19,7 +19,13 @@ class PrepareTabBar < BaseMapper
   end
 
   def bar_item(json)
-    image = json["layers"][1]["image"] ? { image: json["layers"][1]["image"]["_ref"] } : {}
+    layer = json["layers"][1]
+    image = {}
+    if layer
+      image = { image: layer["image"]["_ref"] }
+
+      write_image(layer["image"]["_ref"], image_size(layer["frame"]))
+    end
 
     { text: json["layers"][0]["name"] }.merge(image)
   end

@@ -42,4 +42,25 @@ class BaseMapper
 
     map_attributes
   end
+
+  def write_image(path, size)
+    Dir["in/sketch/images/*"].each do |file|
+      next if File.basename(file, ".*") != File.basename(path, ".*")
+      image = MiniMagick::Image.open(file)
+      image.resize(size)
+      image.write "#{images_path}/#{File.basename(file)}"
+    end
+  end
+
+  def images_path
+    @images_path ||= "#{context.to}/images"
+
+    Dir.mkdir(@images_path) unless File.exist?(@images_path)
+
+    @images_path
+  end
+
+  def image_size(frame)
+    "#{frame['width']}x#{frame['height']}"
+  end
 end
