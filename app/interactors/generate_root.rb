@@ -55,7 +55,7 @@ class GenerateRoot
 
   def build_resources(xml)
     xml.resources do
-      Dir["in/sketch/images/*"].each do |file|
+      Dir["#{context.to}/images/*"].each do |file|
         xml.image(name: file_path(file), width: 36, height: 36)
       end
     end

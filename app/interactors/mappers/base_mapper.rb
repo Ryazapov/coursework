@@ -44,12 +44,16 @@ class BaseMapper
   end
 
   def write_image(path, size)
+    new_name = ""
     Dir["in/sketch/images/*"].each do |file|
       next if File.basename(file, ".*") != File.basename(path, ".*")
       image = MiniMagick::Image.open(file)
       image.resize(size)
-      image.write "#{images_path}/#{File.basename(file)}"
+      new_name = SecureRandom.uuid
+      image.write "#{images_path}/#{new_name}.#{File.extname(file)}"
     end
+
+    new_name
   end
 
   def images_path

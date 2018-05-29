@@ -54,8 +54,8 @@ class PrepareButtons < BaseMapper
     item = {}
     json["layers"].each do |element|
       next unless element["name"] == "Image"
-      item = { image: File.basename(element["image"]["_ref"]) }
-      write_image(element["image"]["_ref"], image_size(element["frame"]))
+      new_name = write_image(element["image"]["_ref"], image_size(element["frame"]))
+      item = { image: new_name }
     end
 
     item

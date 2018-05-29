@@ -1,112 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-  <device id="retina4_0" orientation="portrait">
-    <adaptation id="fullscreen"/>
-  </device>
-  <dependencies>
-    <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-    <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-    <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-  </dependencies>
-  <objects>
-    <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModuleProvider="target">
-      <connections>
-        <outlet property="view" destination="15a913cb-a885-48b2-a645-8e4fb8f96184" id="sfx-zR-JGt"/>
-      </connections>
-    </placeholder>
-    <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-    <view contentMode="scaleToFill" id="15a913cb-a885-48b2-a645-8e4fb8f96184">
-      <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-      <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-      <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-      <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-      <subviews>
-        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9a02c9cb-d482-496b-943e-946dbad8957a">
-          <rect key="frame" x="38" y="378" width="245" height="50"/>
-          <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-          <color red="0" green="0.4784313725490197" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" key="backgroundColor"/>
-          <state key="normal" title="Test" image="">
-            <color red="0.816203773021698" green="0.007513228338211775" blue="0.1066960170865059" alpha="1" colorSpace="custom" customColorSpace="sRGB" key="titleColor"/>
-          </state>
-          <userDefinedRuntimeAttributes>
-            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-              <integer key="value" value="10"/>
-            </userDefinedRuntimeAttribute>
-          </userDefinedRuntimeAttributes>
-        </button>
-        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0af5f85c-02d2-4d05-9b4f-6d9088f89a8b">
-          <rect key="frame" x="38" y="453" width="245" height="50"/>
-          <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-          <color red="1" green="0" blue="0.7170516304347823" alpha="1" colorSpace="custom" customColorSpace="sRGB" key="backgroundColor"/>
-          <state key="normal" title="" image="27828f71e462f1726be38ba5cda1e08427503f81"/>
-          <userDefinedRuntimeAttributes>
-            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-              <integer key="value" value="30"/>
-            </userDefinedRuntimeAttribute>
-          </userDefinedRuntimeAttributes>
-        </button>
-        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ef14e52-81d4-41d7-a5dc-ac41067f22eb">
-          <rect key="frame" x="38" y="79" width="245" height="50"/>
-          <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-          <color red="0" green="0.4784313725490197" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" key="backgroundColor"/>
-          <state key="normal" title="Login" image="">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" key="titleColor"/>
-          </state>
-          <userDefinedRuntimeAttributes>
-            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-              <integer key="value" value="10"/>
-            </userDefinedRuntimeAttribute>
-          </userDefinedRuntimeAttributes>
-        </button>
-        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78830663-9539-4e39-a64c-0cae68328b48">
-          <rect key="frame" x="42" y="256" width="75" height="20"/>
-          <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-          <fontDescription key="fontDescription" type="system" pointSize="17"/>
-          <color red="0.9707751870155334" green="0.9072384238243103" blue="0.1094621494412422" alpha="1" colorSpace="custom" customColorSpace="sRGB" key="textColor"/>
-        </label>
-        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6a7b8f5-27b3-4d5a-8e4b-aea27d5d489c">
-          <rect key="frame" x="42" y="141" width="43" height="20"/>
-          <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-          <fontDescription key="fontDescription" type="system" pointSize="17"/>
-          <color red="0" green="0" blue="0" alpha="1" colorSpace="custom" customColorSpace="sRGB" key="textColor"/>
-        </label>
-        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" placeholder="Enter your email…" translatesAutoresizingMaskIntoConstraints="NO" id="c53c1104-2feb-4cfc-a639-c1143784b578">
-          <rect key="frame" x="39" y="164" width="245" height="30"/>
-          <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-          <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" key="backgroundColor"/>
-        </textField>
-        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" placeholder="Enter your password…" translatesAutoresizingMaskIntoConstraints="NO" id="6621a6a8-39d6-4254-a595-4400ef437724">
-          <rect key="frame" x="39" y="281" width="245" height="30"/>
-          <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-          <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" key="backgroundColor"/>
-        </textField>
-        <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38080fb2-1aa9-4bfc-b7f2-fdfdba9f2a6e">
-          <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-          <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-          <color _class="color" alpha="0.8200000000000001" blue="0.9725490196078431" green="0.9725490196078431" red="0.9725490196078431"/>
-          <items>
-            <navigationItem title="Login" id="119da21b-d299-452a-8ccf-cca500040c45">
-              <barButtonItem key="rightBarButtonItem" title="Sign Up" id="d4da8e79-0845-4678-83da-a0c83db3c62f">
-                <color red="0" green="0.4784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" key="tintColor"/>
-              </barButtonItem>
-            </navigationItem>
-          </items>
-        </navigationBar>
-        <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b53b1a15-d378-4d03-bd2d-ebbabc03ad97">
-          <rect key="frame" x="0" y="520" width="320" height="49"/>
-          <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-          <items>
-            <tabBarItem title="Linux" image="aed5cfcb19b3fa602ff1b4cc8e414742cebb339d" id="86e492c9-15d4-48b9-8e40-d0213cc5d4f9"/>
-            <tabBarItem title="Menu" image="27828f71e462f1726be38ba5cda1e08427503f81" id="1a1a13a7-b34e-485f-bd16-8885190edd1c"/>
-            <tabBarItem title="Pause" image="524ced774fd449ce4c104ff58d4f9a63fd89dc8f" id="2a147914-06a2-416b-99b9-ceb59b095bb9"/>
-          </items>
-        </tabBar>
-      </subviews>
-    </view>
-  </objects>
-  <resources>
-    <image name="27828f71e462f1726be38ba5cda1e08427503f81.png" width="36" height="36"/>
-    <image name="524ced774fd449ce4c104ff58d4f9a63fd89dc8f.png" width="36" height="36"/>
-    <image name="aed5cfcb19b3fa602ff1b4cc8e414742cebb339d.png" width="36" height="36"/>
-  </resources>
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="coursework" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="9a7c84d2-3bb5-4fec-b9e9-84fc0f3dbab3" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9a7c84d2-3bb5-4fec-b9e9-84fc0f3dbab3">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="50feb831-6259-412a-b977-c818224aeed5">
+                    <rect key="frame" x="61" y="431" width="167" height="74"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="785dcf1e-f9bb-40b4-9f89-f29a1ad105e0." translatesAutoresizingMaskIntoConstraints="NO" id="a53b3be5-7a6d-4471-a7a5-b31843d4c548">
+                    <rect key="frame" x="120" y="203" width="80" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2c633d37-fa7b-46c3-a3a8-661cd69ee2d8">
+                    <rect key="frame" x="42" y="256" width="75" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.97077518701553345" green="0.9072384238243103" blue="0.1094621494412422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c075bef2-1690-4403-a2ce-88d95a67b017">
+                    <rect key="frame" x="42" y="141" width="43" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email…" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fb2daa21-6d66-4cfb-9671-b175624e48ff">
+                    <rect key="frame" x="39" y="164" width="245" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password…" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9d783cba-836d-4a84-a8df-78097c1939ce">
+                    <rect key="frame" x="39" y="281" width="245" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13c44b40-5e66-4434-ba20-6621b1c73afb">
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Login" id="797fe3a0-f859-47e2-aba9-fa82ff6942f3">
+                            <barButtonItem key="rightBarButtonItem" title="Sign Up" id="7f12f8e0-dc2e-46eb-aacf-a39b721d4b16">
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0171e4de-3b84-4e67-a0e8-3deb33713632">
+                    <rect key="frame" x="0.0" y="520" width="320" height="49"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <tabBarItem title="Linux" image="b5ffe9d2-623d-4442-8f42-4ca4da3536ce" id="ee0965d6-886e-4de4-b072-31b90ce988bf"/>
+                        <tabBarItem title="Menu" image="9d23a5c1-66a6-4673-aa13-73a3ce85efe6" id="ba6b3fe1-a572-45c1-92ed-bba49c8feb84"/>
+                        <tabBarItem title="Pause" image="93725d52-176a-4629-b308-e95484d4d16b" id="50073c97-1bea-460a-a5bf-00a02d88dc8f"/>
+                    </items>
+                </tabBar>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6145cf3c-4768-423b-a1e9-e4857da044ed">
+                    <rect key="frame" x="38" y="336" width="245" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.71705163043478226" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="" image="a2c2ff1c-afe9-44e1-8c96-899e948cd587"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95ad1795-ee9d-486d-9049-f4296e680311">
+                    <rect key="frame" x="38" y="89" width="245" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137254901968" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="785dcf1e-f9bb-40b4-9f89-f29a1ad105e0." width="80" height="80"/>
+        <image name="93725d52-176a-4629-b308-e95484d4d16b" width="16" height="16"/>
+        <image name="9d23a5c1-66a6-4673-aa13-73a3ce85efe6" width="16" height="16"/>
+        <image name="a2c2ff1c-afe9-44e1-8c96-899e948cd587" width="16" height="16"/>
+        <image name="b5ffe9d2-623d-4442-8f42-4ca4da3536ce" width="16" height="16"/>
+    </resources>
 </document>

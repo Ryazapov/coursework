@@ -22,9 +22,9 @@ class PrepareTabBar < BaseMapper
     layer = json["layers"][1]
     image = {}
     if layer
-      image = { image: layer["image"]["_ref"] }
+      new_name = write_image(layer["image"]["_ref"], image_size(layer["frame"]))
 
-      write_image(layer["image"]["_ref"], image_size(layer["frame"]))
+      image = { image: new_name }
     end
 
     { text: json["layers"][0]["name"] }.merge(image)
